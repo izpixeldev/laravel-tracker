@@ -1,0 +1,58 @@
+{
+    "name": "izpixel/laravel-tracker",
+    "description": "Basic request & device and geolocation tracker for Laravel applications.",
+    "version": "1.0.0",
+    "keywords": [
+        "laravel",
+        "laravel tracker",
+        "http tracker"
+    ],
+    "homepage": "https://github.com/izpixeldev/laravel-tracker",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Aytac Malkoc",
+            "email": "dev@izpixel.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^11.0",
+        "illuminate/support": "^11.3",
+        "jenssegers/agent": "^2.6"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Izpixel\\LaravelTracker\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Izpixel\\LaravelTracker\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Izpixel\\LaravelTracker\\LaravelTrackerServiceProvider"
+            ],
+            "aliases": {
+                "LaravelTracker": "Izpixel\\LaravelTracker\\Facades\\LaravelTracker"
+            }
+        }
+    },
+    "minimum-stability": "stable"
+}
